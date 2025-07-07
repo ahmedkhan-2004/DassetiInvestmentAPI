@@ -1,0 +1,6 @@
+@DassetiInvestmentAPI_HostAddress = http://localhost:5276
+
+GET {{DassetiInvestmentAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
