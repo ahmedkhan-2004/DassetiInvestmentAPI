@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\vfs-bot-venv\\Lib\\site-packages\\virtualenv\\activation\\python\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj": {}
+    "C:\\Dasseti Projects\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\vfs-bot-venv\\Lib\\site-packages\\virtualenv\\activation\\python\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj": {
+    "C:\\Dasseti Projects\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\vfs-bot-venv\\Lib\\site-packages\\virtualenv\\activation\\python\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj",
+        "projectUniqueName": "C:\\Dasseti Projects\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj",
         "projectName": "DassetiInvestmentAPI",
-        "projectPath": "C:\\Users\\User\\vfs-bot-venv\\Lib\\site-packages\\virtualenv\\activation\\python\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj",
+        "projectPath": "C:\\Dasseti Projects\\DassetiInvestmentAPI\\DassetiInvestmentAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\vfs-bot-venv\\Lib\\site-packages\\virtualenv\\activation\\python\\DassetiInvestmentAPI\\obj\\",
+        "outputPath": "C:\\Dasseti Projects\\DassetiInvestmentAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
