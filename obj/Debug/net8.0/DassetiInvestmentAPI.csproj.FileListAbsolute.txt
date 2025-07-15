@@ -270,3 +270,8 @@ c:\Dasseti Projects\DassetiInvestmentAPI\obj\Debug\net8.0\refint\DassetiInvestme
 c:\Dasseti Projects\DassetiInvestmentAPI\obj\Debug\net8.0\DassetiInvestmentAPI.pdb
 C:\Dasseti Projects\DassetiInvestmentAPI\obj\Debug\net8.0\DassetiInvestmentAPI.genruntimeconfig.cache
 C:\Dasseti Projects\DassetiInvestmentAPI\obj\Debug\net8.0\ref\DassetiInvestmentAPI.dll
+c:\Dasseti Projects\DassetiInvestmentAPI\bin\Debug\net8.0\HealthChecks.NpgSql.dll
+c:\Dasseti Projects\DassetiInvestmentAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+c:\Dasseti Projects\DassetiInvestmentAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+c:\Dasseti Projects\DassetiInvestmentAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+c:\Dasseti Projects\DassetiInvestmentAPI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll

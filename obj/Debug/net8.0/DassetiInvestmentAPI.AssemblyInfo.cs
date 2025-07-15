@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DassetiInvestmentAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a1dba4f78bb0f7f9889845b4485be0fb0078898")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+328d50b5bbfc50f4473f046aa40182113f34c834")]
 [assembly: System.Reflection.AssemblyProductAttribute("DassetiInvestmentAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DassetiInvestmentAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
