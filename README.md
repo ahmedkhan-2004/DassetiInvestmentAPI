@@ -1,78 +1,255 @@
-# 🚀 Dasseti Investment Analysis API
+# 🚀 Dasseti Investment API
 
-## 📋 Project Overview
-A comprehensive RESTful API for investment analysis, ESG scoring, and due diligence management. Built with .NET 8 and PostgreSQL, featuring AI-powered company analysis capabilities.
+A professional-grade investment analysis API built with .NET Core 8 and PostgreSQL, featuring AI-powered insights through Model Context Protocol (MCP) integration.
 
-## 🎯 Key Features
-- ✅ Complete CRUD operations for company management
-- ✅ ESG scoring and top performers tracking
-- ✅ AI-powered investment analysis and risk assessment
-- ✅ Due diligence data management
-- ✅ RESTful API design with Swagger documentation
-- ✅ PostgreSQL database with Entity Framework Core
+## ✨ Features
 
-## 🛠️ Technologies Used
-- **.NET 8** - Modern C# framework
-- **ASP.NET Core Web API** - RESTful API framework
-- **Entity Framework Core** - ORM for database operations
-- **PostgreSQL** - Robust relational database
-- **Semantic Kernel** - AI integration capabilities
-- **Swagger/OpenAPI** - API documentation and testing
+- **🤖 AI-Ready Architecture**: Built-in MCP (Model Context Protocol) server for AI agent integration
+- **📊 Investment Analysis**: ESG scoring, risk assessment, and investment recommendations
+- **🔍 Company Data Management**: Comprehensive company information with industry classification
+- **💡 Market Analytics**: Real-time market statistics and performance insights
+- **🌱 ESG Integration**: Environmental, Social, and Governance scoring system
+- **📈 Risk Assessment**: Multi-factor risk evaluation and recommendations
 
-## 🏗️ Architecture
-- **Models**: Company data structures and DTOs
-- **Controllers**: RESTful API endpoints
-- **Services**: Business logic and AI analysis
-- **Data**: Database context and configurations
+## 🛠️ Tech Stack
 
-## 🚀 API Endpoints
+- **Backend**: .NET Core 8 Web API
+- **Database**: PostgreSQL with Entity Framework Core
+- **Documentation**: Swagger/OpenAPI
+- **Architecture**: Clean Architecture with Repository Pattern
+- **Protocol**: Model Context Protocol (MCP) for AI integration
 
-### Companies Management
-- `GET /api/companies` - Get all companies
-- `GET /api/companies/{id}` - Get specific company
-- `POST /api/companies` - Create new company
-- `PUT /api/companies/{id}` - Update company
-- `DELETE /api/companies/{id}` - Delete company
-
-### ESG & Analysis
-- `GET /api/companies/esg-performers` - Get top ESG performers
-- `POST /api/companies/{id}/analyze` - Generate AI analysis
-
-## 📊 Sample Data
-The API includes sample companies (Apple, Tesla) with:
-- Market capitalization data
-- Revenue information
-- ESG scores
-- Risk assessments
-- Industry classifications
-
-## 🔧 Setup Instructions
+## 🚀 Quick Start
 
 ### Prerequisites
+
 - .NET 8 SDK
-- PostgreSQL 15+
-- Visual Studio 2022
+- PostgreSQL (local installation)
+- Git
 
 ### Installation
-1. Clone the repository
-2. Update connection string in `appsettings.json`
-3. Run `dotnet restore` to install packages
-4. Run `dotnet run` to start the application
-5. Navigate to `https://localhost:7xxx/swagger` for API documentation
 
-## 🧪 Testing
-Use the Swagger UI for interactive API testing, or tools like Postman for comprehensive testing scenarios.
+1. **Clone the repository:**
+```bash
+git clone https://github.com/yourusername/DassetiInvestmentAPI.git
+cd DassetiInvestmentAPI
+```
 
-## 🎯 Business Value
-This API demonstrates:
-- **ESG Integration**: Critical for modern investment decisions
-- **AI-Powered Analysis**: Automated investment recommendations
-- **Scalable Architecture**: Ready for enterprise deployment
-- **Due Diligence Support**: Comprehensive data management
-- **Compliance Ready**: Structured data for regulatory requirements
+2. **Set up PostgreSQL:**
+```bash
+# Create database (using psql or pgAdmin)
+CREATE DATABASE DassetiInvestmentDB;
+```
 
-## 👨‍💻 Developer
-Built as a demonstration of modern API development practices for investment technology applications.
+3. **Configure connection string:**
+Update `appsettings.json`:
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Database=DassetiInvestmentDB;Username=your_username;Password=your_password"
+  }
+}
+```
 
-## 📞 Contact
-Ahmed Khan - ahmed2004.akn@gmail.com - ahmedkhan2004
+4. **Restore dependencies:**
+```bash
+dotnet restore
+```
+
+5. **Run the application:**
+```bash
+dotnet run
+```
+
+The API will start at `https://localhost:5001`
+
+## 📚 API Documentation
+
+### Core Endpoints
+
+- **Swagger UI**: `https://localhost:5001/swagger`
+- **Health Check**: `https://localhost:5001/health`
+- **Root**: `https://localhost:5001/` (redirects to Swagger)
+
+### MCP Endpoints
+
+- **Capabilities**: `GET /mcp/capabilities`
+- **Tool Execution**: `POST /mcp/execute`
+- **API MCP**: `GET /api/mcp/capabilities`
+- **API Tool Execution**: `POST /api/mcp/execute`
+
+## 🔧 MCP Tools Available
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_companies` | Get all companies | None |
+| `get_company_by_symbol` | Find company by stock symbol | `symbol` (string) |
+| `get_esg_performers` | Top ESG performing companies | `limit` (int, optional) |
+| `analyze_company` | AI-powered company analysis | `symbol` (string) |
+| `get_companies_by_risk` | Filter companies by risk level | `risk_level` (Low/Medium/High) |
+| `get_companies_by_industry` | Filter companies by industry | `industry` (string) |
+| `get_market_analytics` | Market statistics and insights | None |
+
+## 🎯 Usage Examples
+
+### Using MCP Tools
+
+**Get Company Analysis:**
+```bash
+POST /mcp/execute
+Content-Type: application/json
+
+{
+  "tool": "analyze_company",
+  "parameters": {
+    "symbol": "AAPL"
+  }
+}
+```
+
+**Get Market Analytics:**
+```bash
+POST /mcp/execute
+Content-Type: application/json
+
+{
+  "tool": "get_market_analytics",
+  "parameters": {}
+}
+```
+
+**Filter by Risk Level:**
+```bash
+POST /mcp/execute
+Content-Type: application/json
+
+{
+  "tool": "get_companies_by_risk",
+  "parameters": {
+    "risk_level": "Low"
+  }
+}
+```
+
+## 🗃️ Database Schema
+
+The application automatically creates and seeds the database with:
+
+- **Companies**: Stock information, ESG scores, risk levels
+- **Industries**: Sector classification
+- **Market Data**: Analytics and performance metrics
+
+### Sample Data Includes:
+- Technology companies (Apple, Microsoft, Google)
+- Healthcare companies (Johnson & Johnson, Pfizer)
+- Financial services (JPMorgan Chase, Bank of America)
+- Energy companies (ExxonMobil, Chevron)
+
+## 🏗️ Architecture Overview
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Controllers   │    │    Services     │    │  Repositories   │
+│                 │    │                 │    │                 │
+│ • MCPController │───▶│ • MCPService    │───▶│ • CompanyRepo   │
+│ • BaseController│    │ • AIAnalysis    │    │ • GenericRepo   │
+│                 │    │ • DataSeeding   │    │                 │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                                        │
+                                                        ▼
+                                              ┌─────────────────┐
+                                              │   Database      │
+                                              │                 │
+                                              │ • PostgreSQL    │
+                                              │ • EF Core       │
+                                              └─────────────────┘
+```
+
+## 🧪 Development
+
+### Running in Development
+
+```bash
+# Set development environment
+export ASPNETCORE_ENVIRONMENT=Development
+
+# Run with hot reload
+dotnet watch run
+```
+
+### Database Migrations
+
+```bash
+# Add new migration
+dotnet ef migrations add MigrationName
+
+# Update database
+dotnet ef database update
+
+# Remove last migration
+dotnet ef migrations remove
+```
+
+### Testing the API
+
+1. **Using Swagger UI**: Navigate to `https://localhost:5001/swagger`
+2. **Using curl**: 
+```bash
+curl -X GET "https://localhost:5001/mcp/capabilities"
+```
+3. **Using Postman**: Import the API endpoints from Swagger
+
+## 📊 Health Monitoring
+
+The API includes comprehensive health checks:
+
+```bash
+GET /health
+```
+
+Response includes:
+- Database connectivity status
+- Application health status
+- Response times and diagnostics
+
+## 🔒 Security Features
+
+- **CORS Configuration**: Configurable cross-origin requests
+- **Input Validation**: Comprehensive request validation
+- **Error Handling**: Structured error responses
+- **Connection Security**: Secure database connections
+
+## 📈 Performance Features
+
+- **Async Operations**: Non-blocking database operations
+- **Query Optimization**: NoTracking for read operations
+- **Connection Pooling**: Efficient database connections
+- **Caching Ready**: Architecture supports caching layers
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+## 🙏 Acknowledgments
+
+- Built with .NET Core 8
+- PostgreSQL for robust data storage
+- Entity Framework Core for ORM
+- Swagger for API documentation
+- Model Context Protocol for AI integration
+
+📞 Support & Contact
+Developer: Ahmed Khan
+For support and questions:
+Create an issue in the GitHub repository
+Check the API documentation at /swagger
+Review the health endpoint at /health
+Email: ahmed2004.akn@gmail.com
+LinkedIn: ahmedkhan04
+GitHub: ahmedkhan-2004
+
