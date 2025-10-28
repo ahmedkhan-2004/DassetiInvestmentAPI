@@ -1,6 +1,10 @@
-# 🚀 Dasseti Investment API
+# 📊 Dasseti Investment Intelligence API
 
-A professional-grade investment analysis API built with .NET Core 8 and PostgreSQL, featuring AI-powered insights through Model Context Protocol (MCP) integration.
+> AI-powered investment analysis with **ESG scoring** and **Model Context Protocol (MCP)** integration
+
+## 🎯 Overview
+
+Enterprise API built for institutional investment analysis with AI-powered ESG (Environmental, Social, Governance) scoring and due diligence automation.
 
 ## ✨ Features
 
